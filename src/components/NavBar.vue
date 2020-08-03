@@ -3,9 +3,12 @@
     <header class="top-navbar">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="" />
-          </a>
+          <!-- Logo -->
+          <router-link :to="{ name: 'Home' }" class="navbar-brand"
+            ><img :src="require('@/assets/images/logo.png')" alt=""
+          /></router-link>
+
+          <!-- Responsive NavBar-->
           <button
             class="navbar-toggler"
             type="button"
@@ -17,10 +20,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbars-rs-food">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
+                <router-link :to="{ name: 'Home' }">Home</router-link>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="menu.html">Menu</a>
@@ -72,7 +76,10 @@
 
 <script>
 export default {
-  name: "NavBar"
+  name: "NavBar",
+  data() {
+    return {};
+  }
 };
 </script>
 

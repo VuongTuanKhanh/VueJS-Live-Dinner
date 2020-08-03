@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="about">
-      This is About
+    <div class="menu">
+      This is Menu
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "About"
+  name: "Menu"
 };
 </script>
 

@@ -10,50 +10,16 @@
 
           <div class="collapse navbar-collapse" id="navbars-rs-food">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <router-link :to="{ name: 'Home' }" class="nav-link"
-                  >Home</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Menu' }" class="nav-link"
-                  >Menu</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'About' }" class="nav-link"
-                  >About</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Reservation' }" class="nav-link"
-                  >Reservation</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Stuff' }" class="nav-link"
-                  >Stuff</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Gallery' }" class="nav-link"
-                  >Gallery</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Blog' }" class="nav-link"
-                  >Blog</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Detail' }" class="nav-link"
-                  >Detail</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Contact' }" class="nav-link"
-                  >Contact</router-link
-                >
+              <li
+                v-for="tab in tabs"
+                :key="tab"
+                class="nav-item"
+                @click="current_Tab = tab"
+                :class="{ active: current_Tab == tab }"
+              >
+                <router-link :to="{ name: tab }" class="nav-link">{{
+                  tab
+                }}</router-link>
               </li>
             </ul>
           </div>
@@ -67,7 +33,20 @@
 export default {
   name: "NavBar",
   data() {
-    return {};
+    return {
+      current_Tab: "Home",
+      tabs: [
+        "Home",
+        "Menu",
+        "About",
+        "Reservation",
+        "Stuff",
+        "Gallery",
+        "Blog",
+        "Detail",
+        "Contact"
+      ]
+    };
   }
 };
 </script>
@@ -128,7 +107,8 @@ li {
 .top-navbar .navbar-light .navbar-nav .nav-link {
   color: #010101;
   font-size: 16px;
-  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
   padding: 10px 20px;
   border-radius: 4px;
   text-transform: uppercase;

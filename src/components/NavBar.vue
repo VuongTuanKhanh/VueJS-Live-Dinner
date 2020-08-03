@@ -40,31 +40,42 @@
                   data-toggle="dropdown"
                   >Pages</router-link
                 >
+
                 <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                  <a class="dropdown-item" href="reservation.html"
-                    >Reservation</a
+                  <router-link
+                    :to="{ name: 'Reservation' }"
+                    class="dropdown-item"
+                    >Reservation</router-link
                   >
-                  <a class="dropdown-item" href="stuff.html">Stuff</a>
-                  <a class="dropdown-item" href="gallery.html">Gallery</a>
+                  <router-link :to="{ name: 'Stuff' }" class="dropdown-item"
+                    >Stuff</router-link
+                  >
+                  <router-link :to="{ name: 'Gallery' }" class="dropdown-item"
+                    >Gallery</router-link
+                  >
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a
+                <router-link
+                  to="#"
                   class="nav-link dropdown-toggle"
-                  href="#"
                   id="dropdown-a"
                   data-toggle="dropdown"
-                  >Blog</a
+                  >Blog</router-link
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                  <a class="dropdown-item" href="blog.html">blog</a>
-                  <a class="dropdown-item" href="blog-details.html"
-                    >blog Single</a
+                  <router-link :to="{ name: 'Blog' }" class="dropdown-item"
+                    >Blog</router-link
+                  >
+                  <router-link :to="{ name: 'Detail' }" class="dropdown-item"
+                    >blog Single</router-link
                   >
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <router-link :to="{ name: 'Contact' }" class="nav-link"
+                  >Contact</router-link
+                >
               </li>
             </ul>
           </div>
@@ -83,4 +94,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+</style>

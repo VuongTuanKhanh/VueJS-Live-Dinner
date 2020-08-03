@@ -27,18 +27,18 @@
                 <router-link :to="{ name: 'Home' }">Home</router-link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="menu.html">Menu</a>
+                <router-link :to="{ name: 'Menu' }">Menu</router-link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <router-link :to="{ name: 'About' }">About</router-link>
               </li>
               <li class="nav-item dropdown">
-                <a
+                <router-link
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   id="dropdown-a"
                   data-toggle="dropdown"
-                  >Pages</a
+                  >Pages</router-link
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdown-a">
                   <a class="dropdown-item" href="reservation.html"

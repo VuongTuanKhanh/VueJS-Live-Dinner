@@ -18,6 +18,7 @@
       <div class="slide">
         <img :src="slide.image" alt="" />
       </div>
+      <div class="overlay-background"></div>
     </div>
   </div>
 </template>
@@ -67,6 +68,17 @@ export default {
 </script>
 
 <style>
+.overlay-background {
+  background: #333;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.25;
+  z-index: 100;
+}
+
 .slider-container {
   height: 730px;
   width: 100%;
@@ -104,7 +116,7 @@ export default {
   position: absolute;
   top: 0;
   left: 100%;
-  z-index: 10;
+  z-index: 1;
   background-size: cover;
   background-position: 50% 50%;
   transition: left 0s 0.75s;

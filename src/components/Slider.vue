@@ -55,6 +55,9 @@ export default {
       function() {
         let slides = document.getElementsByClassName("slide_show");
         this.current_Slide += 1;
+        if (this.current_Slide > 2) {
+          this.current_Slide = 0;
+        }
         slides[this.current_Slide].click();
       }.bind(this),
       3000

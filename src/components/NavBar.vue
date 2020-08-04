@@ -1,32 +1,30 @@
 <template>
-  <div>
-    <header class="top-navbar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <!-- Logo -->
-          <router-link :to="{ name: 'Home' }" class="navbar-brand"
-            ><img :src="require('@/assets/images/logo.png')" alt=""
-          /></router-link>
+  <header class="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <!-- Logo -->
+        <router-link :to="{ name: 'Home' }" class="navbar-brand"
+          ><img :src="require('@/assets/images/logo.png')" alt=""
+        /></router-link>
 
-          <div class="collapse navbar-collapse" id="navbars-rs-food">
-            <ul class="navbar-nav ml-auto">
-              <li
-                v-for="tab in tabs"
-                :key="tab"
-                class="nav-item"
-                @click="current_Tab = tab"
-                :class="{ active: current_Tab == tab }"
-              >
-                <router-link :to="{ name: tab }" class="nav-link">{{
-                  tab
-                }}</router-link>
-              </li>
-            </ul>
-          </div>
+        <div class="collapse navbar-collapse" id="navbars-rs-food">
+          <ul class="navbar-nav ml-auto">
+            <li
+              v-for="tab in tabs"
+              :key="tab"
+              class="nav-item"
+              @click="current_Tab = tab"
+              :class="{ active: current_Tab == tab }"
+            >
+              <router-link :to="{ name: tab }" class="nav-link">{{
+                tab
+              }}</router-link>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-  </div>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script>
@@ -54,7 +52,6 @@ export default {
 <style>
 .top-navbar {
   position: relative;
-  z-index: 10;
 }
 .top-navbar .navbar {
   padding: 15px 0px;
@@ -67,7 +64,7 @@ export default {
   transform: translate3d(0, 0, 0);
   -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-  z-index: 100;
+  background: #f8f9fa!important;
 }
 
 .navbar > .container {
@@ -81,10 +78,12 @@ export default {
   justify-content: space-between;
   margin-left: 105px;
   margin-right: 105px;
+  z-index: 100;
 }
 
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
 }
 .navbar-brand {
   display: inline-block;
@@ -113,6 +112,7 @@ li {
   border-radius: 4px;
   text-transform: uppercase;
   text-decoration: none;
+  z-index: 100;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover {
@@ -126,12 +126,6 @@ li {
   font-family: "Rubik", sans-serif;
 }
 
-.navbar-expand-lg .navbar-nav .dropdown-menu {
-  border: none;
-  border-radius: 0px;
-  padding: 10px;
-  box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.5);
-}
 .navbar-expand-lg .navbar-nav .dropdown-menu a {
   padding: 10px 10px;
   text-transform: uppercase;

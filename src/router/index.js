@@ -38,22 +38,22 @@ const routes = [
   {
     path: "/stuff",
     name: "Stuff",
-    component: () => import("../components/Stuff.vue")
+    component: () => import("../views/Stuff.vue")
   },
   {
     path: "/gallery",
     name: "Gallery",
-    component: () => import("../components/Gallery.vue")
+    component: () => import("../views/Gallery.vue")
   },
   {
     path: "/reservation",
     name: "Reservation",
-    component: () => import("../components/Reservation.vue")
+    component: () => import("../views/Reservation.vue")
   },
   {
     path: "/blog-detail",
     name: "Detail",
-    component: () => import("../components/Detail.vue")
+    component: () => import("../views/Detail.vue")
   }
 ];
 

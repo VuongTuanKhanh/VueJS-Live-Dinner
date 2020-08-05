@@ -201,6 +201,26 @@ export default {
 </script>
 
 <style scoped>
+.why-text-1 h4 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+}
+.why-text-1 p {
+  color: #ffffff;
+  font-size: 13px;
+  border-bottom: 1px dashed #010101;
+  margin: 0px;
+  padding-bottom: 15px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.why-text-1 h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
 .why-text-1 {
   position: absolute;
   left: 0;

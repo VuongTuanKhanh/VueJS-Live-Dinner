@@ -9,6 +9,7 @@
       <Quote />
       <SpecialMenu />
       <Gallery />
+      <ContactBar />
     </div>
   </div>
 </template>
@@ -20,6 +21,7 @@ import Introduction from "@/components/Introduction.vue";
 import Quote from "@/components/Quote.vue";
 import SpecialMenu from "@/components/SpecialMenu.vue";
 import Gallery from "@/components/Gallery.vue";
+import ContactBar from "@/components/ContactBar.vue";
 export default {
   components: {
     NavBar,
@@ -27,7 +29,8 @@ export default {
     Introduction,
     Quote,
     SpecialMenu,
-    Gallery
+    Gallery,
+    ContactBar
   }
 };
 </script>

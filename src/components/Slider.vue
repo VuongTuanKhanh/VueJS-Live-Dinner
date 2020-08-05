@@ -20,6 +20,30 @@
       </div>
       <div class="overlay-background"></div>
     </div>
+    <div class="container" id="slide-content">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="m-b-20">
+            <strong
+              >Welcome To <br />
+              Yamifood Restaurant</strong
+            >
+          </h1>
+          <p class="m-b-40">
+            See how your users experience your website in realtime or view
+            <br />
+            trends to see any changes in performance over time.
+          </p>
+          <p>
+            <router-link
+              :to="{ name: 'Reservation' }"
+              class="btn btn-lg btn-circle btn-outline-new-white"
+              >Reservation</router-link
+            >
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -68,6 +92,116 @@ export default {
 </script>
 
 <style>
+#slide-content p {
+  font-size: 25px;
+  color: #fff;
+}
+
+#slide-content h1 strong {
+  font-weight: bolder;
+}
+
+#slide-content h1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  color: #fff;
+  line-height: 120% !important;
+}
+
+#slide-content .col-md-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: left !important;
+}
+
+#slide-content {
+  height: 100%;
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: 150px;
+  margin-top: 100px;
+}
+
+strong {
+  font-weight: bolder;
+  font-size: 64px;
+}
+
+#slide-content > .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: 19px 36px;
+}
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 12px 30px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.1875rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-outline-new-white {
+  color: #fff;
+  background-color: #d65106;
+  background-image: none;
+  border-color: #d65106;
+}
+.btn-outline-new-white:hover {
+  color: #ffffff;
+  background-color: #333333;
+  border-color: #333333;
+}
+
+.cover-slides h1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  color: #fff;
+}
+.cover-slides p {
+  font-size: 18px;
+  color: #fff;
+}
+.slides-pagination a {
+  border: 2px solid #ffffff;
+}
+.slides-pagination a.current {
+  background: #d65106;
+  border: 2px solid #d65106;
+}
+
+.container h1 {
+  color: white;
+}
+
 .overlay-background {
   background: #333;
   position: absolute;

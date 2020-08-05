@@ -41,4 +41,9 @@ export default {
   z-index: 1;
   width: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
 </style>

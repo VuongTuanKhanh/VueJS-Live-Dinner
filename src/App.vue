@@ -1,39 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
-      <NavBar />
+      <NavBar :tabs="tabs" />
     </div>
-    <div id="content">
-      <Slider />
-      <Introduction />
-      <Quote />
-      <SpecialMenu />
-      <Gallery />
-      <ContactBar />
-      <Footer />
-    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import Slider from "@/components/Slider.vue";
-import Introduction from "@/components/Introduction.vue";
-import Quote from "@/components/Quote.vue";
-import SpecialMenu from "@/components/SpecialMenu.vue";
-import Gallery from "@/components/Gallery.vue";
-import ContactBar from "@/components/ContactBar.vue";
-import Footer from "@/components/Footer.vue";
 export default {
   components: {
-    NavBar,
-    Slider,
-    Introduction,
-    Quote,
-    SpecialMenu,
-    Gallery,
-    ContactBar,
-    Footer
+    NavBar
+  },
+  data() {
+    return {
+      tabs: ["Home", "Menu", "About", "Gallery", "Contact"]
+    };
   }
 };
 </script>

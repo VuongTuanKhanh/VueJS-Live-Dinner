@@ -1,14 +1,31 @@
 <template>
   <div>
-    <div class="menu">
-      This is Menu
+    <div id="content">
+      <Slider />
+      <SpecialMenu />
+      <Quote />
+      <ContactBar />
+      <Footer />
     </div>
+    <router-view />
   </div>
 </template>
 
 <script>
+import Slider from "@/components/Slider.vue";
+import SpecialMenu from "@/components/SpecialMenu.vue";
+import Quote from "@/components/Quote.vue";
+import ContactBar from "@/components/ContactBar.vue";
+import Footer from "@/components/Footer.vue";
 export default {
-  name: "Menu"
+  name: "Menu",
+  components: {
+    Slider,
+    SpecialMenu,
+    Quote,
+    ContactBar,
+    Footer
+  }
 };
 </script>
 

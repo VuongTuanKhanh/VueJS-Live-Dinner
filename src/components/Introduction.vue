@@ -30,6 +30,7 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
           <img :src="image" alt="" class="img-fluid" />
         </div>
+        <slot></slot>
       </div>
     </div>
   </div>
@@ -113,5 +114,4 @@ export default {
 .img-fluid {
   max-width: 100%;
 }
-
 </style>

@@ -30,20 +30,17 @@
 <script>
 export default {
   name: "NavBar",
+  props: {
+    tabs: {
+      type: Array,
+      default() {
+        return ["Home", "Menu", "About", "Gallery", "Contact"];
+      }
+    }
+  },
   data() {
     return {
-      current_Tab: "Home",
-      tabs: [
-        "Home",
-        "Menu",
-        "About",
-        "Reservation",
-        "Stuff",
-        "Gallery",
-        "Blog",
-        "Detail",
-        "Contact"
-      ]
+      current_Tab: this.tabs[0]
     };
   }
 };
@@ -60,9 +57,7 @@ export default {
   border-radius: 0px 0px 100px 100px;
   transition: height 0.3s ease-out, background 0.3s ease-out,
     box-shadow 0.3s ease-out;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
   background: #f8f9fa !important;
 }
@@ -70,11 +65,8 @@ export default {
 .navbar > .container {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-left: 105px;
   margin-right: 105px;

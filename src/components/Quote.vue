@@ -75,7 +75,6 @@ export default {};
   padding: 100px 0;
   background-attachment: fixed;
   background-position: center center;
-  position: absolute;
   width: 100%;
 }
 .qt-background p {

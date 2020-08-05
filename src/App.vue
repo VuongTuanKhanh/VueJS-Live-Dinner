@@ -7,6 +7,7 @@
       <Slider />
       <Introduction />
       <Quote />
+      <SpecialMenu />
     </div>
   </div>
 </template>
@@ -16,12 +17,14 @@ import NavBar from "@/components/NavBar.vue";
 import Slider from "@/components/Slider.vue";
 import Introduction from "@/components/Introduction.vue";
 import Quote from "@/components/Quote.vue";
+import SpecialMenu from "@/components/SpecialMenu.vue";
 export default {
   components: {
     NavBar,
     Slider,
     Introduction,
-    Quote
+    Quote,
+    SpecialMenu
   }
 };
 </script>
@@ -46,8 +49,30 @@ export default {
   width: 100%;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 a {
   text-decoration: none;
 }
-
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+body {
+  color: #666666;
+  font-size: 15px;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.80857;
+}
 </style>

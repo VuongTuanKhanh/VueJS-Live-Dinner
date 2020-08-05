@@ -26,9 +26,9 @@ const routes = [
     component: () => import("../views/Menu.vue")
   },
   {
-    path: "/pages",
-    name: "Pages",
-    component: () => import("../views/Pages.vue")
+    path: "/reservation",
+    name: "Reservation",
+    component: () => import("../views/Reservation.vue")
   },
   {
     path: "/gallery",

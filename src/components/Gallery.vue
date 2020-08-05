@@ -79,7 +79,7 @@ h2 {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  max-width: 31%;
+  max-width: 28%;
 }
 .img-fluid {
   max-width: 100%;
@@ -105,6 +105,7 @@ h2 {
   margin-top: 30px;
   width: 90%;
   margin: auto;
+  padding-left: 100px;
 }
 .tz-gallery .lightbox img {
   width: 100%;

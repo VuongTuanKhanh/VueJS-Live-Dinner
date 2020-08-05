@@ -8,15 +8,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
-          <h3>About Us</h3>
+          <h3>{{ title }}</h3>
           <p>
-            Integer cursus scelerisque ipsum id efficitur. Donec a dui
-            fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus
-            a interdum. Vivamus semper posuere dui.
+            {{ text }}
           </p>
         </div>
         <div class="col-lg-3 col-md-6">
-          <h3>Subscribe</h3>
+          <h3>{{ btn_text }}</h3>
           <div class="subscribe_form">
             <form class="subscribe_form">
               <input
@@ -26,19 +24,23 @@
                 placeholder="Email Address..."
                 type="email"
               />
-              <button type="submit" class="submit">SUBSCRIBE</button>
+              <button type="submit" class="submit">{{ btn_text }}</button>
               <div class="clearfix"></div>
             </form>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <h3>Contact information</h3>
-          <p class="lead">Ipsum Street, Lorem Tower, MO, Columbia, 508000</p>
-          <p class="lead"><a href="#">+01 2000 800 9999</a></p>
-          <p><a href="#"> info@admin.com</a></p>
+          <h3>{{ contact_title }}</h3>
+          <p class="lead">{{ address }}</p>
+          <p class="lead">
+            <a href="#">{{ phone }}</a>
+          </p>
+          <p>
+            <a href="#">{{ gmail }}</a>
+          </p>
         </div>
         <div class="col-lg-3 col-md-6">
-          <h3>Opening hours</h3>
+          <h3>{{ hour_title }}</h3>
           <p><span class="text-color">Monday: </span>Closed</p>
           <p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
           <p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
@@ -52,8 +54,8 @@
         <div class="row">
           <div class="col-lg-12">
             <p class="company-name">
-              All Rights Reserved. © 2020
-              <a href="#">Live Dinner Restaurant</a>
+              {{ right_title }}
+              <a href="#">{{ restaurant_name }}</a>
               <br />
               Design By: <b>Archius Vương</b>
             </p>
@@ -66,7 +68,50 @@
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
+  props: {
+    title: {
+      type: String,
+      default: "About Us"
+    },
+    text: {
+      type: String,
+      default:
+        "Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui."
+    },
+    btn_text: {
+      type: String,
+      default: "Subscribe"
+    },
+    contact_title: {
+      type: String,
+      default: "Contact information"
+    },
+    address: {
+      type: String,
+      default: "132 Suong Nguyet Anh, Chau Doc District"
+    },
+    phone: {
+      type: String,
+      default: "(+84) 587.601.494"
+    },
+    gmail: {
+      type: String,
+      default: "info@gmail.com"
+    },
+    hour_title: {
+      type: String,
+      default: "Opening hours"
+    },
+    right_title: {
+      type: String,
+      default: "All Rights Reserved. © 2020"
+    },
+    restaurant_name: {
+      type: String,
+      default: "Live Dinner Restaurant"
+    }
+  }
 };
 </script>
 
@@ -94,7 +139,7 @@ export default {
 .col-md-6 {
   position: relative;
   max-width: 22.5%;
-  width: 22.5%;
+  width: 19.5%;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;

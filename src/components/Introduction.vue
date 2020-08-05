@@ -9,22 +9,19 @@
       <div class="about-row">
         <div class="col-lg-6 col-md-6 col-sm-12 text-center">
           <div class="inner-column">
-            <h1>Welcome To <span>Live Dinner Restaurant</span></h1>
-            <h4>Little Story</h4>
+            <h1>
+              {{ welcome_text }} <span>{{ restaurant_name }}</span>
+            </h1>
+            <h4>{{ title }}</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed
-              convallis arcu. Nullam facilisis, eros in eleifend luctus, odio
-              ante sodales augue, eget lacinia lectus erat et sem.
+              {{ text_1 }}
             </p>
             <p>
-              Sed semper orci sit amet porta placerat. Etiam quis finibus eros.
-              Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla
-              placerat elit in justo vestibulum, et maximus sem pulvinar.
+              {{ text_2 }}
             </p>
-            <a class="btn btn-lg btn-circle btn-outline-new-white" href="#"
-              >Reservation</a
-            >
+            <a class="btn btn-lg btn-circle btn-outline-new-white" href="#">{{
+              btn_Text
+            }}</a>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -41,6 +38,34 @@ import image from "@/assets/images/about-img.jpg";
 
 export default {
   name: "Introduction",
+  props: {
+    welcome_text: {
+      type: String,
+      default: "Welcome To"
+    },
+    restaurant_name: {
+      type: String,
+      default: "Live Dinner Restaurant"
+    },
+    title: {
+      type: String,
+      default: "Little Story"
+    },
+    text_1: {
+      type: String,
+      default:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem."
+    },
+    text_2: {
+      type: String,
+      default:
+        "Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar."
+    },
+    btn_Text: {
+      type: String,
+      default: "Reservation"
+    }
+  },
   data() {
     return {
       image

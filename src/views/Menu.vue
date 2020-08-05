@@ -1,7 +1,13 @@
 <template>
   <div>
     <div id="content">
-      <Slider />
+      <Slider
+        :welcome_text="welcome_text"
+        :restaurant_name="restaurant_name"
+        :btn_text="btn_text"
+        :intro_text_1="intro_text_1"
+        :intro_text_2="intro_text_2"
+      />
       <SpecialMenu />
       <Quote />
       <ContactBar />
@@ -25,6 +31,15 @@ export default {
     Quote,
     ContactBar,
     Footer
+  },
+  data() {
+    return {
+      welcome_text: "Menu",
+      restaurant_name: "Yamifood Restaurant",
+      btn_text: "Reservation",
+      intro_text_1: "Welcome to the heaven of flavor",
+      intro_text_2: "Bring you up to the sky"
+    };
   }
 };
 </script>

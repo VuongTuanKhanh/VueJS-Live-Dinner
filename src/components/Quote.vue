@@ -8,14 +8,11 @@
     <div class="quote-container">
       <div class="quote-row">
         <div class="col-md-8 ml-auto mr-auto text-center">
-          <p class="lead">
-            " If you're not the one cooking, stay out of the way and compliment
-            the chef. "
-          </p>
+          <p class="lead">{{ text }}"</p>
         </div>
         <div class="col-md-8 ml-auto mr-auto text-center">
           <p class="author">
-            Micheal James
+            {{ author }}
           </p>
         </div>
       </div>
@@ -24,7 +21,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Quote",
+  props: {
+    text: {
+      type: String,
+      default:
+        "If you're not the one cooking, stay out of the way and compliment the chef"
+    },
+    author: {
+      type: String,
+      default: "Micheal James"
+    }
+  }
+};
 </script>
 
 <style>

@@ -25,20 +25,20 @@
         <div class="col-md-12">
           <h1 class="m-b-20">
             <strong
-              >Welcome To <br />
-              Yamifood Restaurant</strong
+              >{{ welcome_text }}<br />
+              {{ restaurant_name }}</strong
             >
           </h1>
           <p class="m-b-40">
-            See how your users experience your website in realtime or view
+            {{ intro_text_1 }}
             <br />
-            trends to see any changes in performance over time.
+            {{ intro_text_2 }}
           </p>
           <p>
             <router-link
               :to="{ name: 'Reservation' }"
               class="btn btn-lg btn-circle btn-outline-new-white"
-              >Reservation</router-link
+              >{{ btn_text }}</router-link
             >
           </p>
         </div>
@@ -53,6 +53,28 @@ import image2 from "@/assets/images/slider-02.jpg";
 import image3 from "@/assets/images/slider-03.jpg";
 
 export default {
+  props: {
+    welcome_text: {
+      type: String,
+      default: "Welcome To"
+    },
+    restaurant_name: {
+      type: String,
+      default: "Yamifood Restaurant"
+    },
+    btn_text: {
+      type: String,
+      default: "Reservation"
+    },
+    intro_text_1: {
+      type: String,
+      default: "See how your users experience your website in realtime or view"
+    },
+    intro_text_2: {
+      type: String,
+      default: "trends to see any changes in performance over time."
+    }
+  },
   data() {
     return {
       current_Slide: 0,

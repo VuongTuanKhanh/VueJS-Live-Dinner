@@ -121,7 +121,7 @@ export default {
 #slide-content {
   height: 100%;
   position: absolute;
-  z-index: 100000;
+  z-index: 100;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;

@@ -5,18 +5,20 @@
     </div>
     <div id="content">
       <Slider />
+      <Introduction />
     </div>
-    <router-view />
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
 import Slider from "@/components/Slider.vue";
+import Introduction from "@/components/Introduction.vue";
 export default {
   components: {
     NavBar,
-    Slider
+    Slider,
+    Introduction
   }
 };
 </script>
@@ -25,7 +27,6 @@ export default {
 #nav {
   width: 100%;
   margin: 0px;
-  height: 100%;
   position: fixed;
   z-index: 99999;
 }

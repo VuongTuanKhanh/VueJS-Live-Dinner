@@ -64,7 +64,7 @@ export default {
   transform: translate3d(0, 0, 0);
   -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-  background: #f8f9fa!important;
+  background: #f8f9fa !important;
 }
 
 .navbar > .container {

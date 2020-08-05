@@ -4,9 +4,9 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="heading-title text-center">
-            <h2>Contact</h2>
+            <h2>{{ title }}</h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
+              Your Message will be shown below
             </p>
           </div>
         </div>
@@ -63,7 +63,7 @@
                     type="submit"
                     style="pointer-events: all; cursor: pointer;"
                   >
-                    Send Message
+                    {{ btn_text }}
                   </button>
                   <div id="msgSubmit" class="h3 text-center hidden"></div>
                   <div class="clearfix"></div>
@@ -80,6 +80,16 @@
 <script>
 export default {
   name: "Form",
+  props: {
+    title: {
+      type: String,
+      default: "Contact"
+    },
+    btn_text: {
+      type: String,
+      default: "Send Message"
+    }
+  },
   data() {
     return {
       name: "",

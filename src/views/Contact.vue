@@ -2,7 +2,11 @@
   <div>
     <div id="content">
       <Slider />
-      <Form @AddNewMessage="receiveMessage" />
+      <Form
+        @AddNewMessage="receiveMessage"
+        :title="title"
+        :btn_text="btn_text"
+      />
       <div>
         <ul v-for="(message, index) in messages" :key="index">
           <li>
@@ -36,6 +40,8 @@ export default {
   },
   data() {
     return {
+      title: "Contact",
+      btn_text: "Send Message",
       messages: []
     };
   },

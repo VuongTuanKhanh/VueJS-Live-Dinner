@@ -8,6 +8,7 @@
       <Introduction />
       <Quote />
       <SpecialMenu />
+      <Gallery />
     </div>
   </div>
 </template>
@@ -18,13 +19,15 @@ import Slider from "@/components/Slider.vue";
 import Introduction from "@/components/Introduction.vue";
 import Quote from "@/components/Quote.vue";
 import SpecialMenu from "@/components/SpecialMenu.vue";
+import Gallery from "@/components/Gallery.vue";
 export default {
   components: {
     NavBar,
     Slider,
     Introduction,
     Quote,
-    SpecialMenu
+    SpecialMenu,
+    Gallery
   }
 };
 </script>

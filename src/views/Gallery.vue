@@ -1,7 +1,13 @@
 <template>
   <div>
     <div id="content">
-      <Slider />
+      <Slider
+        :welcome_text="welcome_text"
+        :restaurant_name="restaurant_name"
+        :btn_text="btn_text"
+        :intro_text_1="intro_text_1"
+        :intro_text_2="intro_text_2"
+      />
       <Gallery />
       <ContactBar />
       <Footer />
@@ -22,6 +28,15 @@ export default {
     Gallery,
     ContactBar,
     Footer
+  },
+  data() {
+    return {
+      welcome_text: "Gallery",
+      restaurant_name: "Yamifood Restaurant",
+      btn_text: "Reservation",
+      intro_text_1: "Take a good look at our services",
+      intro_text_2: "Experience these stunning dishes is a must of your life"
+    };
   }
 };
 </script>

@@ -158,11 +158,8 @@ strong {
 }
 
 #slide-content > .row {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;

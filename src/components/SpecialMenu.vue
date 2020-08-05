@@ -38,39 +38,159 @@
             </div>
           </div>
         </div>
+        <div class="col-9">
+          <!-- All -->
+          <div class="tab-content">
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-home"
+              role="tabpanel"
+              aria-labelledby="v-pills-home-tab"
+            >
+              <div
+                class="row"
+                v-for="category in categories"
+                :key="category.name"
+              >
+                <div
+                  class="col-lg-4 col-md-6 special-grid drinks"
+                  v-for="dish in category.dishes"
+                  :key="dish.name"
+                  @mouseover="isHovering = dish.name"
+                  @mouseleave="isHovering = ''"
+                >
+                  <div class="gallery-single fix">
+                    <img :src="dish.image" class="img-fluid" alt="Image" />
+                    <div
+                      :class="
+                        isHovering == dish.name ? 'why-text-1' : 'why-text'
+                      "
+                    >
+                      <h4>{{ dish.name }}</h4>
+                      <p>{{ dish.description }}</p>
+                      <h5>{{ dish.price }}</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import image1 from "@/assets/images/img-01.jpg";
+import image2 from "@/assets/images/img-02.jpg";
+import image3 from "@/assets/images/img-03.jpg";
+import image4 from "@/assets/images/img-04.jpg";
+import image5 from "@/assets/images/img-05.jpg";
+import image6 from "@/assets/images/img-06.jpg";
+import image7 from "@/assets/images/img-07.jpg";
+import image8 from "@/assets/images/img-08.jpg";
+import image9 from "@/assets/images/img-09.jpg";
+
 export default {
   name: "SpecialMenu",
   data() {
     return {
       selectedTab: "All",
+      isHovering: "",
+      categories: [
+        {
+          name: "Drinks",
+          dishes: [
+            {
+              image: image1,
+              name: "Special Drink 1",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            },
+            {
+              image: image2,
+              name: "Special Drink 2",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            },
+            {
+              image: image3,
+              name: "Special Drink 3",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            }
+          ]
+        },
+        {
+          name: "Lunch",
+          dishes: [
+            {
+              image: image4,
+              name: "Special Lunch 1",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            },
+            {
+              image: image5,
+              name: "Special Lunch 2",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            },
+            {
+              image: image6,
+              name: "Special Lunch 3",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            }
+          ]
+        },
+        {
+          name: "Dinner",
+          dishes: [
+            {
+              image: image7,
+              name: "Special Dinner 1",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            },
+            {
+              image: image8,
+              name: "Special Dinner 2",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            },
+            {
+              image: image9,
+              name: "Special Dinner 3",
+              description: "Sed id magna vitae eros sagittis euismod.",
+              price: "$10.79"
+            }
+          ]
+        }
+      ],
       links: [
         {
           id: "All",
-          isHovering: false,
+
           ariaControl: "v-pills-home",
           title: "All"
         },
         {
           id: "Drinks",
-          isHovering: false,
+
           ariaControl: "v-pills-profile",
           title: "Drinks"
         },
         {
           id: "Lunch",
-          isHovering: false,
+
           ariaControl: "v-pills-messages",
           title: "Lunch"
         },
         {
           id: "Dinner",
-          isHovering: false,
+
           ariaControl: "v-pills-settings",
           title: "Dinner"
         }
@@ -81,6 +201,59 @@ export default {
 </script>
 
 <style scoped>
+.why-text-1 {
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  right: 0;
+  height: 100%;
+  background: rgba(207, 166, 113, 0.9);
+  padding: 12px 12px;
+  transition: all 0.3s ease;
+}
+
+.why-text {
+  position: absolute;
+  left: 0;
+  bottom: -115%;
+  right: 0;
+  height: 100%;
+  background: rgba(207, 166, 113, 0.9);
+  padding: 12px 12px;
+  transition: all 0.3s ease;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: 10px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.col-md-6 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 27%;
+}
+
+.gallery-single {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px #ccc;
+  margin-bottom: 30px;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
 .special-menu-container {
   width: 100%;
   padding-right: 15px;

@@ -56,19 +56,7 @@ export default {
 a {
   text-decoration: none;
 }
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
+
 body {
   color: #666666;
   font-size: 15px;

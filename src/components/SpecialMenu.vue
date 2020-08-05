@@ -40,7 +40,7 @@
         </div>
         <div class="col-9">
           <!-- All -->
-          <div class="tab-content">
+          <div class="tab-content" v-show="selectedTab == 'All'">
             <div
               class="tab-pane fade show active"
               id="v-pills-home"
@@ -52,6 +52,44 @@
                 v-for="category in categories"
                 :key="category.name"
               >
+                <div
+                  class="col-lg-4 col-md-6 special-grid drinks"
+                  v-for="dish in category.dishes"
+                  :key="dish.name"
+                  @mouseover="isHovering = dish.name"
+                  @mouseleave="isHovering = ''"
+                >
+                  <div class="gallery-single fix">
+                    <img :src="dish.image" class="img-fluid" alt="Image" />
+                    <div
+                      :class="
+                        isHovering == dish.name ? 'why-text-1' : 'why-text'
+                      "
+                    >
+                      <h4>{{ dish.name }}</h4>
+                      <p>{{ dish.description }}</p>
+                      <h5>{{ dish.price }}</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Rest -->
+          <div
+            class="tab-content"
+            v-for="category in categories"
+            :key="category.name"
+            v-show="selectedTab == category.name"
+          >
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-home"
+              role="tabpanel"
+              aria-labelledby="v-pills-home-tab"
+            >
+              <div class="row">
                 <div
                   class="col-lg-4 col-md-6 special-grid drinks"
                   v-for="dish in category.dishes"

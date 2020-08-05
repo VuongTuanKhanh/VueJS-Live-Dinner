@@ -6,6 +6,7 @@
     <div id="content">
       <Slider />
       <Introduction />
+      <Quote />
     </div>
   </div>
 </template>
@@ -14,11 +15,13 @@
 import NavBar from "@/components/NavBar.vue";
 import Slider from "@/components/Slider.vue";
 import Introduction from "@/components/Introduction.vue";
+import Quote from "@/components/Quote.vue";
 export default {
   components: {
     NavBar,
     Slider,
-    Introduction
+    Introduction,
+    Quote
   }
 };
 </script>

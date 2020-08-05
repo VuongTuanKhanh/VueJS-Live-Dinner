@@ -54,7 +54,6 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
-  position: absolute;
 }
 .about-section-box .img-fluid {
   box-shadow: 20px 20px 0px #d65106;

@@ -1,6 +1,6 @@
 <template>
   <div class="menu-box">
-    <div class="container">
+    <div class="special-menu-container">
       <div class="row">
         <div class="col-lg-12">
           <div class="heading-title text-center">
@@ -81,6 +81,14 @@ export default {
 </script>
 
 <style scoped>
+.special-menu-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 130px;
+  margin-left: 130px;
+}
+
 .inner-menu-box .nav-pills .nav-link.hover {
   background: #d65106;
   color: white;
@@ -116,7 +124,7 @@ export default {
 }
 .col-3 {
   flex: 0 0 25%;
-  max-width: 25%;
+  max-width: 18%;
 }
 .col-lg-12 {
   position: relative;
